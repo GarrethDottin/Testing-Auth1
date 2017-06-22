@@ -1,0 +1,45 @@
+
+{{!-- US BANK FORM --}}
+
+<div class="ui modal bank step1 responsive large" data-country="us">
+	<i class="fa fa-close"></i>
+	<h1>
+		<i class="fa fa-lock"></i>  &nbsp; Add Your Bank Account
+	</h1>
+
+	<div class="wrap">
+
+		<hr />
+
+		<div class="ui column grid">
+			
+			<div class="column">
+
+
+				<div class="ui form">
+
+					<h2 class="verification-choice"><label>1. Instant Verification</label>
+					<h3 class="verification-choice">- Select your bank from below</h3>
+					<h3 class="verification-choice">- Link with Harborly using your banking credentials</h3>
+					<h3 class="verification-choice">- Takes a few minutes</h3>
+
+					<div class="ui">
+						<div class="field">
+							{{#each synapse_banks.banks}}
+								<div class="bank-logo func__select_bank" data-bank-name="{{this.bank_name}}">
+									<p>{{this.bank_name}}</p>
+									<img src="{{this.logo}}" alt="{{this.bank_name}}">
+								</div>
+							{{/each}}
+						</div>
+
+					</div>
+				</div>
+
+				<br />
+
+			</div>
+		</div>
+		<h1 class="trust">All data is transfered over SSL and stored using an AES encryption standard</h1>
+	</div>
+</div>

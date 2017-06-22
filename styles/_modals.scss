@@ -1,0 +1,568 @@
+.ui.modal {
+  bottom: inherit;
+  border: none;
+  border-radius: 2px;
+  font-size: 14px;
+  color: $ha-grey-primary;
+  .column {
+    margin-top: 0;
+  }
+
+  h1 {
+    color: $ha-grey-primary-darken;
+    font-size: 26px;
+    text-align: left;
+    font-weight: bold;
+    padding: 0;
+    padding-left: 40px;
+    padding-top: 40px;
+    margin: 0;
+
+    @include breakpoint(xs) {
+      padding-left: 30px;
+      padding-top: 30px;
+    }
+
+    i {
+      color: $ha-green-primary;
+    }
+  }
+
+  p {
+    width: 90%;
+    margin: 0 auto;
+    line-height: 1.8em;
+  }
+
+  h2 {
+    color: $ha-grey-primary-darken;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  hr {
+    width: 100%;
+    height: 2px;
+    background: #eaeaea;
+    border: 0;
+    margin-bottom: 15px;
+    margin-top: 25px;
+  }
+
+  .button {
+    &.full-width {
+      width: 100%;
+    }
+  }
+
+  .action.input {
+    .button {
+
+    }
+  }
+
+  .wrap {
+    padding: 40px;
+    padding-top: 0;
+
+    @include breakpoint(xs) {
+      padding: 30px;
+    }
+
+    padding-top: 0;
+  }
+
+  .form {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .fa-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    &:hover {
+      cursor: pointer;
+      color: darken($ha-grey-primary, 15);
+    }
+  }
+
+  label {
+    font-size: 15px!important;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: $ha-grey-primary-darken!important;
+  }
+
+  .ui.checkbox {
+    margin-bottom: 0;
+    margin-top: 5px;
+
+    label {
+      padding-top: 0;
+      color: $ha-grey-primary!important;
+    }
+  }
+
+  h1.trust {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    color: $ha-grey-primary!important;
+    font-size: 14px !important;
+    line-height: 1.4em;
+    margin-top: 1.1em;
+    text-align: center;
+    font-weight: 100;
+    padding: 0;
+    margin-bottom: 15px;
+
+    i {
+      color: $ha-green-primary;
+    }
+  }
+
+  width: 38%;
+  margin-left: -19%;
+
+  &.large {
+    width: 50%;
+    margin-left: -25%;
+  }
+
+  .continue.button {
+    float: right;
+    margin-bottom: 30px;
+    margin-top: 15px;
+  }
+
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    width: 60%;
+    margin-left: -30%;
+
+    &.large {
+      width: 80%;
+      margin-left: -40%;
+    }
+  }
+
+  @media only screen and (min-width: 321px) and (max-width: 480px) {
+    width: 80%;
+    margin-left: -40%;
+
+    &.large {
+      width: 95%;
+      margin-left: -47.5%;
+    }
+
+  }
+
+  @media only screen and (max-width: 320px) {
+    width: 95%;
+    margin-left: -47.5%;
+    &.large {
+      width: 99%;
+      margin-left: -49%;
+    }
+  }
+
+  @media only screen and (max-width: 745px) {
+    hr {
+      margin-top: 0;
+    }
+  }
+
+}
+
+.modal-backdrop {
+  background: black;
+}
+
+.trust {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  color: #999999 !important;
+  font-size: 0.9em !important;
+  line-height: 1.4em;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.new-account-address {
+  .form {
+    .message {
+      border-radius: 3px;
+      padding: 15px;
+      background: #fcf8e3 !important;
+      margin-bottom: 20px;
+      margin-top: -15px !important;
+      line-height: 1.4em !important;
+      font-size: 14px !important;
+      p {
+        color: #c39e5c !important;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .field {
+    label {
+      font-size: 13px!important;
+      color: $ha-grey-primary!important;
+      font-weight: 100!important;
+    }
+  }
+
+    
+}
+
+.verify-bank, .change-email, .change-password {
+  .wrap {
+    .button {
+      float: right;
+      margin-bottom: 30px;
+      margin-top: 15px;
+    }
+
+    p {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+  }
+
+}
+
+.readd-bank {
+
+  .wrap {
+    p {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+  }
+
+}
+
+.ui.modal.confirm-box {
+
+  .buttons {
+    margin-top: 30px;
+    float: right;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+
+  .wrap {
+    p {
+      font-size: 16px;
+      width: 100%;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      line-height: 1.8em;
+      text-align: left;
+    }
+  }
+
+  .ui.positive.button {
+    margin-top: 0!important;
+  }
+
+}
+
+.ui.modal.ha-confirm-order {
+
+  @media only screen and (max-width: 1220px) {
+    width: 50%;
+    margin-left: -25%;
+  }
+
+  @media only screen and (max-width: 935px) {
+    width: 70%;
+    margin-left: -35%;
+  }
+
+  @media only screen and (max-width: 625px) {
+    width: 90%;
+    margin-left: -45%;
+  }
+
+  @media only screen and (max-width: 432px) {
+    width: 98%;
+    margin-left: -49%;
+  }
+
+  h2 {
+    font-weight: 600;
+    text-align: left;
+    padding-left: 2.5%;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 1em;
+    width: 98%;
+    font-size: 13px;
+    text-align: center;
+    float: none!important;
+    margin-right: 13px;
+  }
+
+  .labels {
+    p {
+      text-align: left;
+      margin-right: 0px;
+      width: 100%;
+    }
+  }
+
+  .text {
+    font-weight: bold;
+    color: $ha-grey-primary-darken;
+    word-wrap: break-word;
+  }
+
+  .ui.button {
+    width: 38.5%!important;
+  }
+
+  .ui.button.positive {
+    margin-top: 0px!important;
+    width: 60%!important;
+  }
+
+  .ui.buttons {
+    float: right;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .ha-qr-code {
+    width: 100%;
+    text-align: center;
+    padding-top: 0px;
+    margin-bottom: 10px;
+
+    .ha-address {
+      font-size: 17px;
+      font-weight: bold;
+      color: $ha-grey-primary-darken;
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 432px) {    
+    .ui.button.positive {
+      margin-top: 0px!important;
+      width: 59%!important;
+    }
+
+    p {
+      font-size: 11px;
+    }
+  }
+
+}
+
+.message {
+  border-radius: 3px;
+  padding: 15px;
+  background: #fcf8e3;
+  margin-bottom: 25px;
+  font-size:  14px;
+  p {
+    color: #c39e5c;
+    margin-bottom: 0!important;
+    line-height: 1.5em!important;
+  }
+}
+
+.step1 {
+
+  .ui.column.grid {
+    margin-left: 0;
+  }
+
+  .field label {
+    font-size: 13px!important;
+  }
+
+  .verification-choice {
+    text-align: left!important;
+    label {
+      font-weight: bold;
+    }
+    span {
+      font-weight: 100;
+      font-size: 12px;
+      text-transform: italic;
+      color: $ha-grey-primary;
+    }
+
+  }
+
+  h3.verification-choice {
+    text-align: left!important;
+    font-weight: 100;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .bank-logo {
+    display: inline-block;
+    width: 15%;
+    text-align: center;
+    margin-bottom: 10px;
+    height: 85px;
+
+    p {
+      font-size: 14px;
+      line-height: 1.2em;
+      display: none;
+      text-align: center;
+    }
+
+    .divider {
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    img {
+      width: 80%;
+      margin-top: 10px;
+      border: 1px solid $ha-grey-secondary;
+      border-radius: 3px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .checkboxes {
+
+    .checkbox {
+      margin-top: 15px!important;
+      @include breakpoint(xs){
+        margin-top: 0px!important;
+      }
+    }
+  }
+}
+
+.ui.modal.step2 {
+
+  .ui.form {
+    width: 90%;
+    margin: 0 auto;
+
+    @include breakpoint(xs) {
+       width: 100%;
+    }
+  }
+
+  .checkboxes {
+    label {
+      font-weight: bold;
+      color: $ha-grey-primary-darken!important;
+      span {
+        font-weight: 100;
+        font-size: 12px;
+        text-transform: italic;
+        color: $ha-grey-primary;
+      }
+    }
+    p {
+      font-size: 14px;
+      width: 100%;
+      margin-left: 30px;
+      margin-top: 5px;
+    }
+
+    .ui.checkbox {
+      margin-top: 20px!important;
+    }
+
+    .ui.checkbox.last {
+      margin-top: 30px!important;
+    }
+  }
+}
+
+.modal {
+  .ui.column.grid {
+     margin-left: 0px;
+  }
+}
+
+.modal.ccard {
+  .ui.column.grid {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .jp-card-container {
+    margin-bottom: 30px;
+  }
+}
+
+.bank-logo {
+  height: 130px;
+  width: auto;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.img-wrap {
+  width: 100%;
+  text-align: center;
+}
+
+.login-wrap {
+  border: 1px solid $ha-grey-secondary!important;
+  border-radius: 3px;
+  padding: 30px;
+  padding-bottom: 100px;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+.modal.bank-login {
+  .ui.form {
+    width: 70%;
+    .button {
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .ui.input {
+    width: 100%;
+    
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.bank-mfa {
+  .form {
+    width: 70%!important;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 35px;
+
+    label {
+      line-height: 1.3em;
+    }
+  }
+}

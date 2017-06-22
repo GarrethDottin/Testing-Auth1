@@ -1,0 +1,39 @@
+
+<div class="ui modal ha-confirm-order responsive func__sell_part2">
+
+	<h1>Sell Completion</h1>
+
+	<div class="wrap">
+		<hr />
+
+		<div class="func__expired ha-expired message hidden">
+			<p>This quoted has expired. Please start a new order to continue.</p>
+		</div>
+		<div class="func__countdown ha-countdown hidden">
+			<div class="number" id="expires">
+				Quote Expires: <span class="func__min"></span> min <span class="func__sec"></span> sec
+			</div>
+		</div>
+
+		<p>To complete your order send 
+
+		<span class="text func__volume">
+		</span> 
+
+		<span class="func__crypto text">
+		</span>
+
+		to the address below:
+
+		<div class="ha-qr-code">
+			<canvas id="qr-code"></canvas>
+			<div class="ha-address func__address">
+			</div>
+		</div>
+
+		<div class="ui buttons">
+			<button class="ui button negative func__cancel pull-right">Cancel</button>
+		</div>
+
+	</div>
+</div>

@@ -1,0 +1,126 @@
+
+<div class="row">
+    <div class="col-xs-12 col-no-padding">
+        {{partial 'web-client/app/templates/market/nav' this}}
+    </div>
+</div>
+<div class="row market-container">
+    <div class="col-xs-12 wrap-col">
+
+        {{!-- {{#is action 'sell'}}
+            <div class="message">
+                <p>Selling is currently not available in your region.</p>
+            </div>
+        {{/is}} --}}
+
+        {{!-- <div class="wrap {{#is action 'sell'}}dimmed{{/is}}"> --}}
+        <div class="wrap">
+            <hr >
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>1. Choose your volume:</h1>
+                </div>
+            </div>
+
+             <div class="row">
+
+                <div class="col-md-6">
+                    <div class="row amount">
+                        <div class="col-xs-12">
+
+                            <p>I want to <b>{{action}}</b></p>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="ui input">
+                                {{!-- <input id="crypto_volume" class="amount func__volume" type="text" placeholder="0.00" {{#isnt snapper false}}autofocus=true{{/isnt}} {{#is action 'sell'}}disabled{{/is}}> --}}
+                                <input id="crypto_volume" class="amount func__volume" type="text" placeholder="0.00" {{#isnt snapper false}}autofocus=true{{/isnt}}>
+                            </div>
+                            
+                            <label><b>{{uppercase crypto}}</b></span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row amount">
+                        <div class="col-xs-12">
+                            <p>I want to {{#is action 'sell'}}<b>receive</b>{{else}}<b>spend</b>{{/is}}</p>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="ui input">
+                               {{!--  <input id="fiat_volume" class="amount func__receive" type="text" placeholder="0.00" {{#is action 'sell'}}disabled{{/is}}>  --}}
+                               <input id="fiat_volume" class="amount func__receive" type="text" placeholder="0.00"> 
+                            </div>
+                            <label><b>{{uppercase fiat}}</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{partial 'web-client/app/templates/market/limit' this}}
+
+            <div class="row pay-with func__bank">
+                <div class="col-xs-12">
+                    <h1>2. Choose your {{#is action 'buy'}}payment{{else}}payout{{/is}} method:</h1>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="ui selection dropdown">
+                                <input type="hidden" name="account">
+                                <div class="default text">Methods</div>
+                                <i class="dropdown icon"></i>
+                                <div class="menu">
+                                
+                                    {{#if bank_accounts}}
+                                        {{partial 'web-client/app/templates/market/bank_account' this}}
+                                    {{/if}}
+
+                                    {{#unless has_payment_method}}
+                                        <div class="item" data-value="0">No Methods</div>
+                                    {{/unless}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="ui button add-new func__new_method"><i class="fa fa-plus"></i>&nbsp; Add New Method</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr>
+
+            <div class="row summary">
+                <div class="col-xs-12">
+
+                    <div class="row">
+
+                        <div class="col-xs-6">
+                            <label class="sub">
+                                Subtotal:
+                            </label>
+                            <br><br>
+                            <label class="sub">Bank fee:</label><br><br>
+                            <label class="sub">Harborly fee:</label><br><br><br>
+                            <label class="focus">
+                                Total ({{fiat_symbol}}): 
+                            </label>
+                        </div>
+                        <div class="col-xs-6 text-right">
+                            <label class="sub"><span class="subtotal func__subtotal">0.00</span></label><br><br>
+                            <label class="sub"><span class="bank-fee func__bank_fee">0.00</span></label><br><br>
+                            <label class="sub"><span class="harborly-fee func__harborly_fee">0.00</span></label><br><br><br>
+                            <label class="focus"><span class="total func__total">0.00</span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="ui positive button func__init_transact">{{capitalizeFirst action}} Bitcoin</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

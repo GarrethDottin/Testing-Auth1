@@ -1,0 +1,107 @@
+
+<div class="ha-bank-account">
+
+    <h1 class="name">
+
+        {{#if sbank.logo}}
+            <img class="logo" src="{{sbank.logo}}"> 
+
+            {{#if pp_info.bank_name}}
+                {{pp_info.bank_name}}
+            {{else}}
+                Bank Account
+            {{/if}}
+        {{else}}
+            <i class="fa fa-bank"></i> &nbsp; Bank Account
+        {{/if}}
+        {{#if verified}}
+            {{#if pp_status}}
+                <button class="ui button func__delete_bank" data-bank-uid="{{uid}}">Delete</button>
+            {{else}}
+                <button class="ui button func__launch_reverify_bank_account_modal" data-bank-uid="{{uid}}">Re-Verify</button>
+                <button class="ui button func__delete_bank" data-bank-uid="{{uid}}">Delete</button>
+            {{/if}}
+        {{else}}
+            {{#if pp_status}}
+                <button class="ui button func__launch_verify_bank" data-bank-uid="{{uid}}">Verify</button>
+                <button class="ui button func__delete_bank" data-bank-uid="{{uid}}">Delete</button>
+            {{else}}
+                <button class="ui button func__launch_reverify_bank_account_modal" data-bank-uid="{{uid}}">Re-Verify</button>
+                <button class="ui button func__delete_bank" data-bank-uid="{{uid}}">Delete</button>
+            {{/if}}
+        {{/if}}
+    </h1>
+
+    <div class="row">
+
+        <div class="col-xs-6">
+
+            <p class="descriptor">State: </p>
+
+        </div>
+
+        <div class="col-xs-6 badge-row">
+
+            {{#if verified}}
+                {{#if pp_status}}
+                    <p class="badge completed">Verified</p>
+                {{else}}
+                    <p class="badge pending">Unverified</p>
+                {{/if}}
+            {{else}}
+                <p class="badge pending">Unverified</p>
+            {{/if}}
+
+        </div>
+
+    </div>
+
+    {{#if pp_info}}
+        {{#if pp_info.nickname}}
+            <div class="row">
+
+                <div class="col-xs-6">
+
+                    <p class="descriptor">Account: </p>
+
+                </div>
+
+                <div class="col-xs-6 badge-row">
+
+                    <p>{{pp_info.nickname}}</p>
+
+                </div>
+
+            </div>
+        {{/if}}
+    {{/if}}
+
+    <div class="row">
+
+        <div class="col-xs-6">
+
+            <p class="descriptor">Last four: </p>
+
+        </div>
+
+        <div class="col-xs-6">
+
+            <p>
+
+                {{#if pp_info}}
+                    {{#if pp_info.account_number_string}}
+                        {{pp_info.account_number_string}}
+                    {{else}}
+                        {{last_four}}
+                    {{/if}}
+                {{else}}
+                    {{last_four}}
+                {{/if}}
+                
+            </p>
+
+        </div>
+
+    </div>
+
+</div>

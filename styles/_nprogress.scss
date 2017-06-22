@@ -1,0 +1,19 @@
+#nprogress {
+
+  z-index: 10000;
+  .bar {
+      background: $ha-green-primary;
+      z-index: 10000;
+    }
+
+    .spinner-icon { 
+      border-top-color: $ha-green-primary;
+      border-left-color: $ha-green-primary;
+      z-index: 10000!important;
+    }
+
+    .peg {
+      box-shadow: 0 0 10px $ha-green-primary, 0 0 5px $ha-green-primary;
+      z-index: 10000;
+    }
+}

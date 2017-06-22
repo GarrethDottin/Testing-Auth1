@@ -1,0 +1,54 @@
+
+<div class="ha-bank-account">
+
+    <h1 class="name">
+        <i class="fa fa-credit-card"></i> &nbsp; Credit Card
+        {{#if verified}}
+            <button class="ui button func__delete_ccard" data-ccard-uid="{{uid}}">Delete</button>
+        {{else}}
+            <button class="ui button func__launch_verify_ccard" data-ccard-uid="{{uid}}">Verify</button>
+            <button class="ui button func__delete_ccard" data-ccard-uid="{{uid}}">Delete</button>
+        {{/if}}
+    </h1>
+
+    <div class="row">
+
+        <div class="col-xs-6">
+
+            <p class="descriptor">State: </p>
+
+        </div>
+
+        <div class="col-xs-6 badge-row">
+
+            {{#if verified}}
+                {{#if pp_status}}
+                    <p class="badge completed">Verified</p>
+                {{else}}
+                    <p class="badge pending">Unverified</p>
+                {{/if}}
+            {{else}}
+                <p class="badge pending">Unverified</p>
+            {{/if}}
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-xs-6">
+
+            <p class="descriptor">Last four: </p>
+
+        </div>
+
+        <div class="col-xs-6">
+
+            <p>{{last_four}}</p>
+
+        </div>
+
+    </div>
+
+</div>

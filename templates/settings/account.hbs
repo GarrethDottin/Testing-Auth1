@@ -1,0 +1,141 @@
+<div id="account" class="tabs {{#isnt setting 'account'}}hidden{{/isnt}}">
+
+	{{!-- <div class="row">
+
+		<div class="col-xs-12 {{#if show_states}}col-md-4{{else}}col-md-6{{/if}}">
+			<div class="wrap">
+
+				<div class="input-wrap">
+
+					<label>Default Currency</label>
+
+					<div class="ui">
+						<select class="ui dropdown currencies">
+							<option value="">Default Currency</option>
+							{{#each config.locking_currencies}}
+								<option value="{{this}}">{{uppercase this}}</option>
+							{{/each}}
+						</select>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-12 {{#if show_states}}col-md-4{{else}}col-md-6{{/if}}">
+			<div class="wrap">
+				<div class="input-wrap">
+					{{partial 'web-client/app/templates/shared/countries' this}}
+				</div>
+			</div>
+		</div>
+		{{#if show_states}}
+		
+			<div class="col-xs-12 col-md-4">
+				<div class="wrap">
+					<div class="input-wrap">
+						{{partial 'web-client/app/templates/shared/states' this}}
+					</div>
+				</div>
+			</div>
+
+		{{/if}}
+	</div> --}}
+
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="wrap">
+				<div class="email input-wrap">
+
+					<label>Full Name</label><br>
+			
+					<div class="email ui segment func__change_name {{#unless name}}not-added{{/unless}}" data-placeholder="New name">
+						<div class="value">
+							{{#if name}}
+								{{name}}
+							{{else}}
+								Click here to add your name
+							{{/if}}
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="wrap">
+				<div class="email input-wrap">
+
+					<label>Email Address</label><br>
+
+					<div class="email ui segment func__change_email" data-placeholder="New email">
+						<div class="value">
+							{{email}}
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="wrap">
+
+				<div class="phone input-wrap">
+
+					<label>Phone Number</label>
+
+					{{#unless phone}}
+						<div class="ha-message">
+							<div>Adding a phone number enables two-factor authentication (<b>recommended</b>).</div>
+						</div>
+					{{/unless}}
+
+					<div class="phone ui segment func__add_phone {{#unless phone}}not-added{{/unless}}" data-placeholder="New phone number">
+						<div class="value">
+							{{#if phone}}
+								{{phone_code}} {{phone}}
+							{{else}}
+								Click here to add your phone
+							{{/if}}
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="wrap">
+
+				<div class="password input-wrap">
+
+					<label>Account Password</label>
+
+					<div class="password ui segment func__change_password {{#unless email_login}}not-added{{/unless}}" data-placeholder="New password">
+						<div class="value">
+							{{#isnt email_login true}}
+								Click here to set your password
+							{{else}}
+								Hidden
+							{{/isnt}}
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br />
+	<br />
+	<br />
+
+</div>

@@ -1,0 +1,153 @@
+<div id="verification" class="tabs {{#isnt setting 'verification'}}hidden{{/isnt}}">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="wrap">
+
+				
+
+			</div>
+		</div>
+	</div>
+
+	{{#if user_verified}}
+		<div class="row">
+			<div class="col-xs-12">
+				<label>My Limits</label>
+				<table class="table">
+					<thead>
+						<tr>
+						  <th>Account</th>
+						  <th>Daily Volume</th>
+						  <th>Weekly Volume</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+						  <td class="money">Unverified</td>
+						  <td class="money">0.00 {{uppercase fiat}}</td>
+						  <td class="money">0.00 {{uppercase fiat}}</td>
+						</tr>
+						<tr>
+						  <td class="money">Verified</td>
+						  <td class="money">{{payments_config.market.limits.day.normal}}.00 {{uppercase fiat}}</td>
+						  <td class="money">{{payments_config.market.limits.week.normal}}.00 {{uppercase fiat}}</td>
+						</tr>
+						<tr>
+						  <td class="money">Current</td>
+						  <td class="money">{{fiat_symbol}}{{fiat_remaining}}.00 {{uppercase fiat}}</td>
+						  <td class="money">{{fiat_symbol}}{{fiat_remaining_week}}.00 {{uppercase fiat}}</td>
+						</tr>
+					</tbody>
+
+				</table>
+			</div>
+		</div>
+	{{/if}}
+
+	<div class="row">
+
+		<div class="col-md-12 level">
+
+			<label>My Verifications</label>
+
+			<div class="row">
+
+				<div class="col-xs-12 item">
+					<h2>Verify Email </h2> 
+					{{#isnt email_verified true}}
+						<p>Click the link sent to your email address. <a href="#" class="func__resend_link">Re-send link</a>.</p>
+						<div class="badge pending">Unverified</div>
+					{{else}}
+						<p>Click the link sent to your email address.</p>
+
+						<div class="badge completed">Completed</div>
+					{{/isnt}}
+				</div>
+
+				<div class="col-xs-12 item">
+					<h2>Verify Phone Number</h2> 
+					<p>Add and verify your phone number to enable two-factor authentication.</p>
+					{{#if phone}}
+						<div class="badge completed">Completed</div>
+					{{else}}
+						<div class="badge pending">Unverified</div>
+					{{/if}}
+				</div>
+
+				{{#if user_verified}}
+					<div class="col-xs-12 item">
+						<h2>Add Personal Information</h2> 
+						<p>Add your full name, home address and birthdate.</p>
+						<div class="badge completed">Completed</div>
+					</div>
+				{{/if}}
+		
+				<div class="col-xs-12 item">
+					<h2>Verify Social Network</h2>
+					<p>Verify your Facebook account.</p>
+					{{#if has_social_network}}
+						<div class="badge completed">Completed</div>
+					{{else}}
+						{{partial 'web-client/app/templates/shared/add_social' this}}
+					{{/if}}
+					
+				</div>
+			
+
+				<div class="col-xs-12 item">
+
+					<h2>Verify ID</h2>
+
+					{{#is id_scan_verified -1}}
+						<p class="wait-disclaimer">Your last ID upload was rejected. Please try again.</p>
+					{{/is}}
+
+					<p>Upload a picture or scan of your driver's license, passport or other government issued ID.</p>
+
+					{{#is id_scan_verified 1}}
+						<div class="badge completed">Completed</div>
+					{{else}}
+
+						{{#if id_scanned}}
+							<div class="badge pending">Pending</div>
+						{{else}}
+							<button class="ui button func__launch_doc_upload">Upload</button>
+						{{/if}}
+					{{/is}}
+					
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-xs-12 item">
+
+					<h2>Verify ID Selfie</h2>
+
+					{{#is id_selfie_verified -1}}
+						<p class="wait-disclaimer">Your last selfie upload was rejected. Please try again.</p>
+					{{/is}}
+
+					<p>Upload a picture of yourself(ie) holding the ID uploaded above.</p>
+
+					{{#is id_selfie_verified 1}}
+						<div class="badge completed">Completed</div>
+					{{else}}
+
+						{{#if id_selfie_scanned}}
+							<div class="badge pending">Pending</div>
+						{{else}}
+							<button class="ui button func__launch_selfie_upload">Upload</button>
+						{{/if}}
+					{{/is}}
+					
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<br /><br /><br />
+</div>

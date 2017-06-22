@@ -1,0 +1,493 @@
+
+.content-block {
+
+  background: white;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 3px;
+  padding-bottom: 20px;
+  width: 100.1%;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 600px;
+  margin-top: 20px;
+  overflow:hidden;
+  max-width: 1200px;
+  width: 90%;
+  margin-bottom: 25px;
+
+  @include border-radius-box-shadow;
+
+  @include breakpoint (xs) {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%!important;
+    margin-top: 0px;
+    min-height: 677px;
+    margin-bottom: 0;
+  }
+}
+
+input.error, .ui.selection.dropdown.error {
+  background: white;
+  border: 3px solid lighten($ha-red,20)!important;
+  color: $ha-red!important;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.ha-main {
+  padding: 0;
+  min-height: 750px;
+  position: relative;
+
+  @include breakpoint(xs) {
+    border: none;
+    min-height: 0px;
+  }
+}
+
+#snapper {
+
+  @include breakpoint(xs) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+}
+
+.ha-drawers {
+  @include breakpoint(xs) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    overflow: scroll;
+  }
+}
+
+.ha-section {
+  min-height: 600px;
+  width: 80%;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 0px;
+  border-radius: 3px;
+
+  @include breakpoint (xs) {
+    padding-left: 0!important;
+    padding-right: 0;
+    .row {
+      margin: 0;
+    }
+    min-height: 0px;
+  }
+
+}
+
+.ha-header {
+  font-size: 25px;
+  margin-top: 45px;
+  margin-bottom: 25px;
+
+  @include breakpoint(xs) {
+    font-size: 20px;
+    line-height: 1.4em;
+    text-align: left;
+    margin-top: 25px;
+    margin-left: -15px;
+  }
+}
+
+.ha-sub-header {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-size: 21px;
+
+  .description {
+    font-size: 15px;
+    font-weight: 100;
+    color: $ha-grey-primary;
+    margin-top: 10px;
+    width: 70%;
+    line-height: 1.7em;
+  }
+
+  .button {
+    float: right;
+    margin-top: -10px!important;
+    display: inline-block;
+  }
+}
+
+.ha-tab-in {
+  padding-left: 15px;
+}
+
+.ha-main-header {
+  color: $ha-grey-primary-darken;
+  width: 100%;
+  min-height: 70px;
+  font-size: 18px;
+  line-height: 70px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: left;
+
+  .edit {
+    a {
+      color: $ha-grey-secondary-darken;
+      font-size: 13px;
+      margin-left: 10px;
+      text-decoration: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  
+
+  @include breakpoint (xs) {
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    font-size: 20px;
+    line-height: 25px;
+    min-height: 25px;
+    text-align: left;
+
+    .money {
+      display: block;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
+  &.secondary {
+    border-bottom: 1px solid #eaeaea;
+    border-top: 0px solid #eaeaea;
+    color: darken($ha-grey-secondary, 50);
+    background: lighten($ha-grey-secondary, 3);
+    font-size: 14px;
+    font-weight: 100;
+    height: 50px;
+    min-height: 50px;
+    line-height: 50px;
+    padding-top: 0;
+    margin-top: -1px;
+
+    @include breakpoint (xs) {
+      padding-right: 15px;
+    }
+  }
+
+}
+
+#tos-view, #privacy-policy-view, #legal-view {
+  margin-bottom: -60px;
+  .market {
+    background-color: rgba(91, 189, 114, 1);
+    padding-bottom: 60px;
+    padding-top: 3em;
+    line-height: 2em;
+    font-size: 13px;
+    .doc-wrap {
+      width: 95%;
+      max-width: 1200px;
+      margin-right: auto;
+      margin-left: auto;
+      padding: 4em;
+      padding-right: 10%;
+      padding-left: 10%;
+      background: white;
+      strong {
+        font-weight: 600;
+      }
+      .header {
+        display: block;
+        font-size: 15px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+      }
+      li {
+        margin-left: 25px;
+      }
+    }
+  }
+}
+
+#nprogress .bar {
+  background: rgba(65, 169, 50, 1);
+}
+
+hr {
+  height: 0px;
+  border-top: 2px solid #eaeaea;
+}
+
+hr.landing {
+  width: 97%;
+  float: left;
+  height: 1px;
+  background: #dddddd;
+  border: 0;
+  margin-top: 0;
+  margin-bottom: 4em;
+  background-color: #dddddd;
+}
+
+.ui.submit.positive.button.ha-create-fb {
+
+  background-color: #3B5998!important;
+  color: white;
+  width: 100%;
+  margin-bottom: 15px;
+  
+}
+
+.badge {
+  font-size: 11px!important;
+  font-weight: 100;
+  text-align: center;
+
+  &.completed, &.success {
+    background: lighten($ha-green-primary, 0);
+  }
+
+  &.failure {
+    background: #bd4546;
+  }
+
+}
+
+.ha-sub-nav {
+    margin-top: 0px;
+    .option:first-of-type .item {
+      border-top-left-radius: 3px;
+    }
+    .option:last-of-type .item {
+      border-top-right-radius: 3px;
+    }
+
+    @include breakpoint(xs) {
+      border-top: 1px solid #eaeaea;
+    }
+  .item {
+    
+    display: block;
+    $height: 60px;
+    height: $height;
+    line-height: $height;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 0px;
+    background: lighten($ha-grey-secondary, 3);
+
+    color: $ha-grey-primary;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    transition: 0s!important;
+    &:hover {
+      text-decoration: none;
+    }
+
+    a {
+      transition: 0s!important;
+    }
+
+    &.active {
+      background: white;
+      color: $ha-green-primary;
+      border-top: 2px solid $ha-green-primary;
+    }
+    &.active:hover {
+      background: white;
+      color: $ha-green-primary;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: darken($ha-grey-primary,0);
+    }
+
+  }
+
+  &.two {
+    .item {
+      width: 49%;
+    } 
+  }
+
+  @include breakpoint(xs) {
+    width: 100%;
+
+    .col-xs-6 {
+      padding: 0;
+    }
+  }
+}
+
+.ui.complete.disabled.button {
+  opacity: 1!important;
+  background: white;
+  
+}
+
+i.confirm {
+  color: $ha-green-primary;
+  font-size: 18px;
+  padding-top: 13px!important;
+}
+
+.ha-wallets {
+  i.fa-qrcode {
+    font-size: 18px;
+    margin-left: -2px!important;
+  }
+
+  text-align: left!important;
+
+  label {
+    margin-top: 15px!important;
+    margin-bottom: 15px!important;
+  }
+
+}
+.ha-add-social {
+  width: 80%;
+
+  .row {
+    margin: 0;
+  }
+
+  @include breakpoint(xs) {
+    width: 100%;
+  }
+
+  margin: 0 auto;
+
+  .ui.button {
+    position: relative!important;
+    top: 0px!important;
+    width: 80%;
+
+    &.disabled {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+      
+    a {
+      color: inherit;
+    }
+
+    @include breakpoint(xs) {
+      width: 60%;
+    }
+
+    .verified {
+      color: $ha-green-primary;
+      margin-left: -10px;
+    }
+
+  }
+}
+
+.next-step {
+
+  @include border-radius-box-shadow-equal;
+
+  i.fa-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #aeaeae;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  padding: 30px;
+  padding-top: 60px;
+  padding-bottom: 65px;
+  width: 80%;
+  margin: 0 auto;
+  border: 0px solid #eaeaea;
+  border-radius: 3px;
+  margin-top: 35px;
+  text-align: center;
+  position: relative;
+
+  @include breakpoint(xs) {
+    width: 92%;
+    padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 35px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 1.4em;
+  }
+
+  p {
+    margin: 0 auto;
+    margin-top: 30px!important;
+    margin-bottom: 40px;
+    font-size: 15px!important;
+    color: $ha-grey-primary;
+    line-height: 1.6em;
+    width: 80%;
+
+    @include breakpoint(xs) {
+      width: 90%;
+    }
+  }
+
+  .ha-add-bank {
+    font-size: 16px!important;
+    margin-top: 0px!important;
+  }
+
+  .position-indicator {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .step-description {
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 1.6em;
+    margin-bottom: 15px;
+  }
+
+  .ui.progress {
+    width: 50%;
+    height: 10px!important;
+    box-shadow: none;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    text-align: left;
+    padding: 1px!important;
+    .bar {
+      background-color: $ha-green-primary!important;
+      height: 6px!important;
+    }
+  }
+}

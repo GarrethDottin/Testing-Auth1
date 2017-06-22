@@ -1,0 +1,82 @@
+<div class="ui modal readd-bank responsive func__readd_bank_modal">
+
+	<h1>Notice: New Payment Processor</h1>
+
+	<div class="wrap">
+		<hr />
+
+		<p>Harborly is proud to announce <a href="https://www.vogogo.com/" target="_blank">Vogogo</a>, our newest payment processing partner! Vogogo brings to the table an extremely fast and reliable service, and Harborly is excited to grow alongside them.</p>
+
+        <p>With this change account actions need to be completed to continue using your Harborly account:</p>
+
+        {{#if dob.month}}
+        {{else}}
+        	<ul>
+	        	<li><p><b>Submit your date of birth to your account profile:</b></p></li>
+	        </ul>
+
+	         <div class="ui form">
+	         	{{#if dob.month}}
+	         	{{else}}
+					<label>Date of Birth:</label>
+
+					<div class="ui action input">
+						<input class="func__dob_val name" {{#if dob.month}}disabled{{/if}} type="text" autofocue=false placeholder="mm/dd/yyyy" {{#if dob.month}}value="{{dob.month}}/{{dob.day}}/{{dob.year}}"{{/if}}>
+						<div class="ui button func__save_dob {{#if dob.month}}disabled{{/if}}">{{#if dob.month}}Submitted{{else}}Submit{{/if}}</div>
+					</div>
+				{{/if}}
+	         </div>
+
+	         <br /><br />
+	    {{/if}}
+
+	    {{#if occupation_id}}
+	    {{else}}
+
+		    <ul>
+	        	<li><p><b>Select your current occupation:</b></p></li>
+	        </ul>
+
+			<div class="ui selection dropdown">
+	            <input type="hidden" name="account">
+	            <div class="default text">Select Occupation</div>
+	            <i class="dropdown icon"></i>
+	            <div class="menu func__occupation_list">
+	           	</div>
+	        </div>
+	    {{/if}}
+
+	    {{#each bank_accounts}}
+
+		    {{#if this.pp_status}}
+		    {{else}}
+
+	        	<p><b>Re-verified this previously synced bank account through one micro-deposit:</b></p>
+	       	
+	        	<div class="ui form">
+	            	{{#if this.pp_status}}
+	            	{{else}}
+	            		<div class="ha-readd-bank bank">
+	            			<div class="row">
+	            				<div class="col-xs-5">
+	            					<h2>Account: <span>******{{this.last_four}}</span></h2>
+	            				</div>
+	            				<div class="col-xs-7">
+	            					<button class="ui button positive func__reverify" data-uid="{{this.uid}}">Re-Verify</button>
+	            					<button class="ui button func__delete" data-uid="{{this.uid}}">Delete</button>
+	            				</div>
+	            			</div>
+	            		</div>
+	            	{{/if}}
+	        	 	<br />
+	        	</div>
+	        {{/if}}
+        {{/each}}
+        	<br />
+
+          	<p>If you have <b>any</b> questions please visit our <a href="https://harborly.uservoice.com/" target="_blank">help desk</a> and contact our support team.</p> 
+
+			<button class="ui button func__close_modal main">Continue</button>
+
+	</div>
+</div>

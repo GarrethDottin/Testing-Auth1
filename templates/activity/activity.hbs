@@ -1,0 +1,56 @@
+{{#if state}}
+	<div class="ha-activity-wrap {{state}} hidden-xs {{#is temp true}}func__new_item{{/is}}">
+		<div class="row">
+
+			<div class="col-xs-3 activity-col date">
+				{{created_hr}}
+			</div>
+
+			<div class="col-xs-3 activity-col description">
+				{{message}}
+			</div>
+
+			<div class="col-xs-3 activity-col status">
+				<div class="badge {{#if state}}{{state}}{{else}}pending{{/if}}">
+					{{#if state}}
+						{{capitalizeFirst state}}
+					{{else}}
+						Pending
+					{{/if}}
+				</div>
+			</div>
+
+			<div class="col-xs-3 activity-col amount">
+				{{title}}
+			</div>
+
+		</div>
+	</div>
+
+	<div class="ha-activity-wrap secondary completed visible-xs {{state}} {{#is temp true}}func__new_item{{/is}}">
+
+		<div class="row">
+
+			<div class="col-xs-4 activity-col date">
+				{{created_hr_mobile}}
+			</div>
+
+			<div class="col-xs-4 activity-col status">
+				<div class="badge {{#if state}}{{state}}{{else}}pending{{/if}}">
+					{{#if state}}
+						{{capitalizeFirst state}}
+					{{else}}
+						Pending
+					{{/if}}
+				</div>
+			</div>
+
+			<div class="col-xs-4 activity-col amount">
+				{{title}}
+			</div>
+
+		</div>
+
+	</div>
+{{/if}}
+

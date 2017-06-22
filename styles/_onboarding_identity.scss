@@ -1,0 +1,88 @@
+#onboarding-identity {
+	.limits {
+		text-align: center;
+		width: 70%;
+		margin: 0 auto;
+		h1 {
+			font-size: 30px;
+			margin-top: 15px;
+			margin-bottom: 15px;
+			font-weight: bold;
+		}
+
+		p {
+			margin-bottom: 30px;
+		}
+	}
+
+	.time-estimate {
+		font-size: 13px;
+		margin-bottom: 10px;
+		margin-top: 10px;
+
+		@include breakpoint(xs) {
+			text-align: center;
+		}
+
+	}
+
+	.ui.form {
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	button.ui.upload.button {
+		width: 120px;
+	}
+
+	label {
+		font-size: 13px;
+		padding-top: 0px;
+	}
+
+	.ui.form {
+		margin-top: 0;
+	}
+
+	.ha-add-social {
+		width: 100%;
+
+		@include breakpoint(xs) {
+			a {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+.social-security-questions {
+	text-align: left;
+	width: 85%;
+	margin: 0 auto;
+	border: 1px solid #eaeaea;
+	border-radius: 5px;
+	margin-top: 25px;
+	padding: 25px;
+	p {
+		margin-top: 5px;
+		font-size: 15px;
+		line-height: 1.5em;
+		text-align: center;
+	}
+
+	.field {
+		margin-top: 20px;
+	}
+	label {
+		margin-bottom: 0;
+		line-height: 1.5em;
+	}
+	.ui.form {
+		padding-left: 25px;
+		width: 100%!important;
+	}
+	.checkbox {
+		margin: 3px;
+	}
+}

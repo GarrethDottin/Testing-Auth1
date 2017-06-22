@@ -1,0 +1,25 @@
+
+body {
+  margin: 0;
+  font-family: "PT Sans Caption", sans-serif;
+  color: lighten(#38424c, 5);
+  -webkit-font-smoothing: subpixel-antialiased;
+  background: #e0e0e0;
+
+  &.snapjs-left {
+    .ha-main {
+      overflow: hidden!important;
+       position: absolute;
+      top: 0px;
+      overflow: hidden;
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 1240px) {
+  html {
+    overflow-x: hidden;
+  }
+}
+

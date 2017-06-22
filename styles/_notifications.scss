@@ -1,0 +1,48 @@
+.messenger-theme-air {
+	top: 16px!important;
+	.messenger-message {
+		width: 60%;
+		@include breakpoint(xs) {
+			width: 100%;
+			max-width: 450px;
+		}
+		margin: 0 auto;
+		background-color: white!important;
+		text-align: center;
+
+		&.error {
+			.messenger-message-inner {
+
+				&::before {
+					background-color: #e74c3c!important;
+				}
+			}
+		}
+
+		&.info {
+			.messenger-message-inner {
+				&::before {
+					background-color: #f1c40f!important;
+				}
+			}
+
+			.messenger-message-inner { 
+				display: inline-block;
+				float: left!important;
+				margin-top: 5px;
+			}
+
+			.messenger-actions {
+				display: inline-block;
+				margin-left: 25px;
+				float: left;
+				margin-top: 1px!important;
+			}
+		}
+	}
+
+	.messenger-message-inner {
+		line-height: 1.6em!important;
+		margin-top: 0!important;
+	}
+}

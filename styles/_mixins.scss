@@ -1,0 +1,110 @@
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+
+@mixin background-fade {
+  transition: opacity $anim_speed ease-in-out;
+    -moz-transition: opacity $anim_speed ease-in-out;
+    -webkit-transition: opacity $anim_speed ease-in-out;
+}
+
+@mixin link-fade {
+  -o-transition: $anim_speed;
+  -ms-transition: $anim_speed;
+  -moz-transition: $anim_speed;
+  -webkit-transition: $anim_speed;
+  transition: $anim_speed;
+}
+
+@mixin border-radius-box-shadow {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  border: none;
+  border-radius: 2px;
+}
+
+@mixin border-radius-box-shadow-equal {
+  box-shadow: 0 0 2px rgba(0,0,0,0.25);
+  border: none;
+  border-radius: 2px;
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+// ============================================================================= MEDIA QUERIES
+@mixin breakpoint($class) {
+    @if $class == xs {
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+    @else if $class == sm {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+    @else if $class == md {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+    @else if $class == lg {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+    @else {
+        @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    }
+}
+
+@mixin retina {
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dppx) {
+        @content;
+    }
+}
+
+.inner-contentCentered {
+  @include breakpoint(xs) {
+    width: 99%;
+    margin: 0 auto;
+  }
+}
+
+.scrollable {
+  overflow: auto;
+  -webkit-transition-property: top, bottom;
+  transition-property: top, bottom;
+  -webkit-transition-duration: .2s, .2s;
+  transition-duration: .2s, .2s;
+  -webkit-transition-timing-function: linear, linear;
+  transition-timing-function: linear, linear;
+  -webkit-overflow-scrolling: touch;
+}
+
+.vertical-align {
+  @include vertical-align;
+}
+
+.snapjs-left {
+  .container.main {
+    overflow: hidden;
+  }
+}
+
+.ha-drawers {
+  @media (min-width: 767px) {
+    display: none;
+  }
+}

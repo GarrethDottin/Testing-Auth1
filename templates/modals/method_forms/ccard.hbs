@@ -1,0 +1,102 @@
+
+{{!-- CA BANK FORM --}}
+
+<div class="ui modal ccard step1 responsive large" data-country="ca" step-two="true">
+	<i class="fa fa-close"></i>
+	<h1>
+		<i class="fa fa-lock"></i>  &nbsp; Add Your Credit Card
+	</h1>
+
+	<div class="wrap">
+
+		<hr />
+
+		<div class="ui column grid">
+			
+			<div class="column">
+				<div class="ui form func__ccard_form">
+
+					<div class="func__ccard_wrapper">
+					</div>
+
+					<div class="ui two fields">
+						<div class="field">
+							<label>Card Number</label>
+							<div class="ui left input">
+								<input class="card-number func__card_number" type="text" name="number" placeholder="&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull;">
+							</div>
+						</div>
+
+						<div class="field">
+							<label>Card Name</label>
+							<div class="ui left input">
+								<input class="card-name func__card_name" type="text" name="name" placeholder="Full Name" value="{{name}}">
+							</div>
+						</div>
+					<div>
+					<div class="ui two fields">
+						<div class="field">
+							<label>Expiry Date</label>
+							<div class="ui left input">
+								<input class="card-number func__expiration_date" type="text" name="expiry" placeholder="mm/yy">
+							</div>
+						</div>
+						<div class="field">
+							<label>Security Code</label>
+							<div class="ui left input">
+								<input class="card-name func__security_code" type="text" name="code" placeholder="&bull;&bull;&bull;">
+							</div>
+						</div>
+					</div>
+
+					<div class="field">
+						<label>Address Line1</label>
+						<div class="ui left input">
+							<input class="card-name func__addressline1" type="text" name="address1" placeholder="Street address" value="{{address.addressline1}}">
+						</div>
+					</div>
+
+					<div class="ui two fields">
+						
+						<div class="field">
+							<label>Address Line2</label>
+							<div class="ui left input">
+								<input class="card-name func__addressline2" type="text" name="address2" placeholder="Apt, unit, floor, etc" value="{{address.addressline2}}">
+							</div>
+						</div>
+						<div class="field">
+							<label>City</label>
+							<div class="ui left input">
+								<input class="card-name func__city" type="text" name="address1" placeholder="Street address" value="{{address.city}}">
+							</div>
+						</div>
+					</div>
+					<div class="ui two fields">
+						
+						<div class="field">
+							<label>ZIP/Postal code</label>
+							<div class="ui left input">
+								<input class="card-name func__state_province_region" type="text" name="address2" placeholder="" value="{{address.zip_postal}}">
+							</div>
+						</div>
+
+						<div class="field">
+							<label>Card Currency</label>
+							<div class="ui left input">
+								<input class="card-name func__currency" type="text" name="fiat" placeholder="&bull;&bull;&bull;" value="{{#if fiat}}{{uppercase fiat}}{{/if}}">
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+			<h1 class="trust">All data is transfered over SSL and stored using an AES encryption standard</h1>
+		</div>
+		
+	  	<div class="continue ui button part1 func__save_ccard">
+			Next &nbsp;<i class="fa fa-chevron-right"></i>
+	 	</div>
+	</div>
+</div>
+

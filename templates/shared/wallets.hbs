@@ -1,0 +1,20 @@
+<div class="ha-wallets func__ha_wallets">
+	<div class="ui form">
+		<div class="field">
+			<label>Your <b>Bitcoin</b> Address: </label>
+			<div class="ui left icon action input">
+			  <input type="text" placeholder="e.g. 1FfmbHfnpaZjKFvyi1okTjJJusN455paPH" {{#if wallets.btc}}value="{{wallets.btc.address}}" disabled="disabled"{{/if}}>
+				  {{#if wallets.btc}}
+				  	<i class="fa fa-check-circle-o confirm icon"></i>
+				  {{else}}
+				  	<i class="fa fa-qrcode icon"></i>
+				  {{/if}}
+				  {{#if wallets.btc}}
+				  	<div class="ui button func__edit_wallet func__wallet btc" data-type="btc">Edit</div>
+				  {{else}}
+				 	<div class="ui button func__save_wallet func__wallet btc" data-type="btc">Save</div>
+				 {{/if}}
+			</div>
+		</div>
+	</div>
+</div>

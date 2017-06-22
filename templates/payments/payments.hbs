@@ -1,0 +1,138 @@
+
+<div class="ha-wrap"> 
+    <div class="row">
+
+        <div class="col-xs-12">
+
+            <div class="ha-header">
+
+                <div class="row">
+
+                    <div class="col-xs-12">
+
+                        <h1>
+                            Payment Methods
+                        </h1>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="ha-sub-header">
+                        Bank Account &nbsp; 
+                        {{#if bank_accounts}}
+                            <a class="bank info-link more-info-link {{#lt bank_accounts.length 1}}hidden{{/lt}}">More Info</a>
+                            <a class="bank info-link less-info-link {{#gt bank_accounts.length 0}}hidden{{/gt}}">Less Info</a>
+                        {{else}}
+                            <a class="bank info-link more-info-link hidden">More Info</a>
+                            <a class="bank info-link less-info-link">Less Info</a>
+                        {{/if}}
+
+                        <div class="ha-add-bank ui button func__launch_bank_modal">
+                            <div>
+                                <i class="fa fa-refresh"></i> &nbsp;New Bank
+                            </div>
+                        </div>
+                    </h1>
+
+                    <p class="bank info {{#gt bank_accounts.length 0}}hidden{{/gt}}">Buy and sell bitcoin and using your bank account. Processing for buys takes <b>5-7 business days</b>. Processing for sells takes <b>1-3 business days</b>.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+         <div class="col-md-12">
+            <div class="row">
+                <div class="col-xs-12">
+                    
+                    <hr />
+
+                    {{#if bank_accounts}}
+                        {{#each bank_accounts}}
+
+                            {{partial 'web-client/app/templates/payments/bank_account' this}}
+
+                        {{/each}}
+                    {{else}}
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p class="no-banks">No synced bank accounts.</p>
+                            </div>
+                        </div>
+                    {{/if}}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- {{#if payments_config.country.ccard_enabled}}
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="ha-sub-header">
+                            Credit Card &nbsp; 
+
+                            
+                            <a class="ccard info-link more-info-link {{#lt credit_cards.length 1}}hidden{{/lt}}">More Info</a>
+                            <a class="ccard info-link less-info-link {{#gt credit_cards.length 0}}hidden{{/gt}}">Less Info</a>
+
+                            <div class="ha-add-bank ui button func__launch_ccard_modal">
+                                <div>
+                                    <i class="fa fa-refresh"></i> &nbsp;New Card
+                                </div>
+                            </div>
+                        </h1>
+
+
+                        {{#if config.country.ccard_linked}}
+                            <p class="ccard info {{#gt credit_cards.length 0}}hidden{{/gt}}">Adding a credit card enables <b>next day</b> bitcoin delivery for bank purchases. When you buy bitcoin your bank account is charged by default and in the event of a failure your credit card will be charged instead.</p>
+                        {{else}}
+                            <p class="ccard info {{#gt credit_cards.length 0}}hidden{{/gt}}">Adding a credit card allows you to buy bitcoin quickly. Selling bitcoin with a credit card is not currently supported.</p>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+             <div class="col-md-12">
+                <div class="row">
+                    <div class="col-xs-12">
+                        
+                        <hr />
+
+                        {{#if credit_cards}}
+                            {{#each credit_cards}}
+
+                                {{partial 'web-client/app/templates/payments/credit_card' this}}
+
+                            {{/each}}
+                        {{else}}
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <p class="no-banks">No synced credit cards.</p>
+                                </div>
+                            </div>
+                        {{/if}}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/if}} --}}
+</div>

@@ -1,0 +1,51 @@
+
+<div class="ha-profile-box contentCentered">
+
+	<div class="wrap">
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="ha-profile-picture big">
+					{{#if profile_picture}}
+						<img src="{{profile_picture}}">
+					{{else}}
+						<div class="default">
+							{{!-- <i class="fa fa-user func__user"></i>
+							<i class="fa fa-facebook hidden func__add_fb"></i> --}}
+						</div>
+					{{/if}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="ui secondary vertical side menu">
+
+	{{!-- <a class="dashboard item" data-route="dashboard">
+		Dashboard
+	</a> --}}
+
+	<a class="activity item" data-route="activity">
+		Activity
+	</a>
+
+	<a class="market item" data-route="buy">
+		Market
+	</a>
+
+	<a class="payments item" data-route="payments">
+		Payments
+	</a>
+	<a class="settings item" data-route="settings">
+		Settings
+	</a>
+
+	{{#is snapper true}}
+		<a class="func__signout item">
+			<i class="sign out icon"></i> Sign Out
+		</a>
+	{{/is}}
+
+</div>

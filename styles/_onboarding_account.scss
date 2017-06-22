@@ -1,0 +1,117 @@
+#onboarding-account {
+
+	.wrap {
+		padding-bottom: 60px;
+	}
+
+	.step-description {
+		margin-bottom: 35px;
+	}
+		
+
+	.ui.button.add-address {
+		width: 100%;
+	}
+
+	label {
+		font-size: 13px;
+		padding-top: 0px;
+	}
+
+	.default.text {
+		font-weight: 400!important;
+		font-size: 16px!important;
+	}
+
+	.ui.form {
+		margin-bottom: 5px;
+	}
+
+	.phonecode {
+		height: 43.5px;
+	}
+
+	.search-wrap {
+		position: relative;
+	}
+
+	.verify.button {
+		width: 100%;
+		margin-top: 15px;
+	}
+
+	h1.header {
+		margin-top: 0px;
+	}
+
+	.ui.dropdown {
+		width: 100%;
+		.default.text {
+			font-weight: 100;
+		}
+	}
+
+	.form.contact {
+		margin-bottom: 0px;
+		margin-top: 15px;
+	}
+
+	.occupation.form {
+		margin-top: 0px;
+
+		font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+		font-weight: normal;
+	}
+
+	.verify-box {
+		
+		width: 70%!important;
+		margin: 0 auto;
+		margin-top: 40px!important;
+
+		p {
+			font-size: 14px;
+			text-align: center;
+			line-height: 1.6em;
+			margin-bottom: 15px;
+		}
+
+		@include breakpoint(xs) {
+			width: 100%!important;
+			margin-top: 5px!important;
+
+		}
+	}
+
+	.ui.action {
+		input {
+			width: 70%;
+		}
+	}
+
+	.func__phone_code {
+		margin: 0;
+	}
+
+	.countries {
+		margin-bottom: 50px;
+		p {
+			margin-bottom: 10px;
+			margin-top: 25px;
+			font-size: 13px;
+		}
+	}
+
+	.not-operating {
+		h1 {
+			text-align: center;
+			margin-top: 5px;
+			margin-bottom: 7px;
+			font-size: 18px;
+		}
+
+		p {
+			margin-bottom: 5px;
+		}
+	}
+}

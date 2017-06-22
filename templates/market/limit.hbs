@@ -1,0 +1,19 @@
+<div class="row limits">
+	<div class="col-xs-12">
+		<div class="limit ui">
+			<h1>
+				You have
+				<span class="amount">
+					{{#if fiat_remaining}}
+						<b>{{fiat_remaining}} {{fiat_symbol}}</b>
+					{{else}}
+						<b>0.00 {{fiat_symbol}}</b>
+					{{/if}}
+				</span> 
+				remaining of your daily limit {{#isnt user_verified true}}- <a class="func__verification">Verify Account</a>{{/isnt}}</h1>
+			<div class="ui successful progress">
+			  <div class="bar" style="width:{{percent_remaining}}%"></div>
+			</div>
+		</div>
+	</div>
+</div>

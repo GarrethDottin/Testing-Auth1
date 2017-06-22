@@ -1,0 +1,29 @@
+.ui.popup {
+  line-height: 1.4em !important;
+}
+
+.button {
+  font-family: "PT Sans Caption", sans-serif;
+  font-weight: 400 !important;
+  text-transform: none!important;
+}
+
+.positive {
+  background: rgba(65, 169, 50, 1) !important;
+}
+
+.ui.dimmer {
+  z-index: 2000;
+}
+
+.positive.button.disabled {
+  color: white!important;
+
+  &:hover {
+    color: white!important;
+  }
+}
+
+.ui.buttons .disabled.button.positive, .ui.disabled.button.positive, .ui.button:disabled.positive, .ui.disabled.button:hover.positive, .ui.disabled.active.button.positive {
+  background-color: $ha-green-primary!important;
+}

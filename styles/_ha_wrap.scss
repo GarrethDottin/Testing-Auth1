@@ -1,0 +1,10 @@
+
+.ha-wrap {
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 25px;
+
+	@include breakpoint(xs) {
+		width: 100%;
+	}
+}

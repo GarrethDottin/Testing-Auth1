@@ -1,0 +1,77 @@
+
+.ha-sidebar {
+
+	@include border-radius-box-shadow-equal;
+	border-radius: 0;
+	background: lighten(#38424c, 0);
+	min-height: 677px;
+
+	@include breakpoint(xs) {
+		width: 266px;
+		min-height: 0px;
+
+	}
+	.ui.vertical.menu {
+		width: 100%;
+
+		a {
+			$size: 32;
+			$pixel: 1 * 2;
+			color: white;
+			padding-top: 35px;
+			padding-bottom: 35px;
+			line-height: 1.5em;
+			margin: 0!important;
+			text-align: center;
+			border-radius: 0!important;
+			border-top: 1px solid rgba(0, 0, 0, 0.12)!important;
+			font-size: 13px;
+			line-height: $size + px;
+		}
+
+		a:last-of-type {
+			border-bottom: 1px solid rgba(0, 0, 0, 0.12)!important;
+		}
+
+		a.active, a.active:hover {
+			background: rgba(0, 0, 0, 0.15);
+			color: $ha-green-primary;
+		}
+
+		@include breakpoint(xs) {
+			a {
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+		}
+	}
+}
+
+.ha-profile-box {
+	text-align: center;
+	padding-top: 20px;
+	margin-bottom: 30px;
+
+	@include breakpoint(xs) {
+		padding-top: 15px;
+	}
+
+	img {
+		border-radius: 50%;
+		border: 2px solid darken(#eaeaea,5);
+		height: 70px;
+
+		width: auto;
+		width: 70px;
+	}
+
+	.default {
+		font-size: 45px;
+		height: 70px;
+		width: 70px;
+		line-height: 70px;
+		margin: 0 auto;
+		border-radius: 50%;
+		color: white;
+	}
+}

@@ -1,0 +1,17 @@
+
+{{#lt onboarding_step 1}}
+	<div class="ui basic button mini func__exit_onboarding exit-onboarding">
+		<i class="fa fa-arrow-left"></i> &nbsp; Exit Setup
+	</div>
+{{else}}
+	<div class="ui basic button mini func__step_back exit-onboarding">
+		<i class="fa fa-arrow-left"></i> &nbsp; Previous Step
+	</div>
+{{/lt}}
+
+<img class="logo" src="https://s3.amazonaws.com/harborly/logo-icon.png">
+
+<p class="position-indicator">Step {{step_number}} of 2</p>
+<div class="ui successful progress">
+	<div class="bar" style="width:{{step_percent}}%"></div>
+</div>

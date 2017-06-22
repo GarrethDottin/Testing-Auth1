@@ -1,0 +1,35 @@
+
+<div class="header dropdown-header">
+    <i class="fa fa-bank"></i> &nbsp;
+    Bank Accounts
+</div>
+
+{{#each bank_accounts}}
+    {{#if this.verified}}
+        <div class="item bank {{#if sbank.logo}}logo-item{{/if}}" data-uid="{{this.uid}}" data-value="{{this.uid}}" data-last_four="{{this.last_four}}" data-type="{{this.type}}">
+
+            {{#if sbank.logo}}
+                <img class="logo small" src="{{sbank.logo}}"> 
+
+                {{#if pp_info.bank_name}}
+                    {{pp_info.bank_name}}
+                {{else}}
+                    {{this.account_name}}
+                {{/if}}
+
+            {{else}}
+                {{this.account_name}}
+            {{/if}}
+
+            - {{this.last_four}}
+
+        </div>
+    {{else}}
+        {{#if pp_status}}
+            <div class="item func__verify" data-uid="{{this.uid}}">Verify account: {{this.last_four}}</div>
+        {{else}}
+            <div class="item func__launch_reverify_bank_account_modal" data-uid="{{this.uid}}">Re-Verify account: {{this.last_four}}</div>
+        {{/if}}
+
+    {{/if}}
+{{/each}}           

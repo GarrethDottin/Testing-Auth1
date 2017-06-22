@@ -1,0 +1,115 @@
+<div class="wrap">
+	
+	{{partial 'web-client/app/templates/onboarding/header' this}}
+
+	<p class="step-description">Verify your identity with a driver's license, passport or other government issued ID.</p>
+
+	<div class="levels-wrap">
+
+		<div class="row level">
+				
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-xs-12">
+						<h1 class="main">1. Social Security Number</h1>
+						<h1 class="secondary">Enter in your social security number.</h1>
+					</div>
+					
+					<div class="">
+						<div class="col-xs-12">
+							<div class="ui form">
+								<div class="ui action input {{#if social_verified}}disabled{{/if}}">
+									<input type="text" class="func__document_val" placeholder="XXX-XX-XXXX" value="{{document_value}}">
+									<div class="ui button func__submit_social {{#if social_verified}}disabled{{/if}}">
+										{{#if social_verified}}
+											Verified
+										{{else}}
+											Verify
+										{{/if}}
+									</div>
+								</div>
+							</div>
+							{{#if social_question_set}}
+								<div class="social-security-questions func__questions" data-id="{{social_question_set.id}}">
+									<p>Answer the following to verify SSN <b>{{document_value}}</b>:</p>
+									{{#each social_question_set.questions}}
+										<div class="field func__question">
+											<label>{{this.id}}. {{this.question}}</label>
+											<div class="ui form">
+  												<div class="grouped fields">
+													{{#each this.answers}}
+														<div class="field">
+													      <div class="ui radio checkbox">
+													        <input type="radio" name="{{../this.id}}" data-id="{{this.id}}">
+													        <label>{{this.answer}}</label>
+													      </div>
+													    </div>
+													{{/each}}
+												</div>
+  											</div>
+										</div>
+									{{/each}}
+									<div class="ui button next func__submit_social_answers">Submit Answers</div>
+								</div>
+							{{/if}}
+						</div>
+					</div>
+				
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row level">
+				
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-xs-12">
+						<h1 class="main">2. A scan or picture of your ID document</h1>
+						<h1 class="secondary">Make sure your document is clear and high resolution or your verification could be rejected.</h1>
+					</div>
+					
+					<button class="ui button upload func__launch_doc_upload {{#if id_scanned}}disabled{{/if}}">
+						{{#if id_scanned}}
+							Pending
+						{{else}}
+							Upload
+						{{/if}}
+					</button>
+					
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row level">
+				
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-xs-12">
+						<h1 class="main">3. A selfie of you holding your ID document</h1>
+						<h1 class="secondary">Make sure your face and ID are clearly visible or your verification could be rejected.</h1>
+					</div>
+					
+					<button class="ui button upload func__launch_selfie_upload {{#if id_selfie_scanned}}disabled{{/if}}">
+						{{#if id_selfie_scanned}}
+							Pending
+						{{else}}
+							Upload
+						{{/if}}
+					</button>
+					
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12">
+			<button class="ui button next func__next disabled">Continue</button>
+		</div>
+	</div>
+
+</div>

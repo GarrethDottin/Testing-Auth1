@@ -1,0 +1,249 @@
+//  Nav
+//  Navigation Bar
+
+
+//-- Base styles --//
+
+
+.navbar-brand {
+  color: white;
+  font-size: 30px;
+  margin-right: 25px;
+  text-align: center;
+  margin: 0 auto;
+
+  &:hover {
+    color: white;
+  }
+
+  i {
+    color: $ha-green-primary;
+  }
+}
+
+.ha-navbar.navbar-default {
+  padding-top: 0px;
+  border: none;
+  color: white;
+  background-color: rgba(255,255,255,1);
+  padding-left: 35px;
+  padding-right: 35px;
+
+  $image-width: 190px;
+
+  .navbar-brand {
+    color: white;
+    font-size: 30px;
+    padding-top: 0px!important;
+    margin-right: 25px;
+    margin-top: -2px;
+
+    @include breakpoint(xs) {
+      margin-top: 6px;
+      margin-right: 0px;
+
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      width: 100%;
+    }
+
+    img {
+      width: $image-width;
+      height: auto;
+
+      @include breakpoint(xs) {
+        width: 145px;
+      }
+    }
+
+    &:hover {
+      color: white;
+    }
+
+    i {
+      color: $ha-green-primary;
+    }
+  }
+
+  .dropdown.open {
+    a {
+      background-color: transparent!important;
+
+    }
+
+    .dropdown-menu {
+      background: lighten($ha-grey-secondary, 3);
+
+      @include border-radius-box-shadow;
+
+      a {
+        color: $ha-grey-primary-darken!important;
+
+        &:hover {
+          color: $ha-grey-primary!important;
+        }
+      }
+    }
+  }
+
+  li {
+    a {
+      color: white!important;
+    }
+    &.active {
+      a {
+        background-color: transparent!important;
+      }
+    }
+  }
+
+  .ha-prices {
+    margin-top: 7px;
+    margin-right: 45px;
+  }
+
+  .ha-login {
+    border: 2px solid white;
+    border-radius: 3px;
+    margin-left: 15px;
+
+    a {
+      padding: 0.8em;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+
+    font-size: 16px;
+  }
+
+  &.ha-secondary {
+    color: $ha-grey-primary-darken;
+    height: 90px;
+    margin: 0;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+    box-shadow:         0 1px 3px 0 rgba(0,0,0,0.1);
+    border-radius: 0;
+
+    .navbar-brand { 
+      color: $ha-grey-primary-darken;
+      padding-top: 9px;
+    }
+
+    li {
+      a {
+        color: $ha-grey-primary-darken!important;
+        font-size: 15px;
+      }
+      &.active {
+        a {
+          background-color: transparent!important;
+        }
+      }
+    }
+
+    padding-top: 22px;
+
+    .ha-login {
+      border: 0px solid $ha-grey-primary-darken;
+      border-radius: 3px;
+      margin-left: 15px;
+      color: $ha-grey-primary-darken!important;
+      margin-top: 5px;
+
+      a {
+        padding: 0.8em;
+        padding-left: 1em;
+        padding-right: 1em;
+        color: $ha-grey-primary-darken!important;
+        opacity: 1!important;
+        font-size: 14px;
+      }
+
+      font-size: 16px;
+    }
+
+    .ha-name {
+      margin-right: 15px;
+    }
+
+    .ha-profile-picture {
+      margin-top: -13px;
+      i {
+        font-size: 19px;
+        display: inline-block;
+        margin-bottom: -10px;
+      }
+
+      span {
+        margin-top: -5px;
+      }
+
+      a {
+        padding: 0;
+      }
+
+      p {
+        display: inline-block;
+        padding-top: 0px;
+        line-height: 71px;
+      }
+      img {
+        display: inline-block;
+        width: 35px;
+        height: auto;
+        border-radius: 50%;
+        margin-bottom: -10px;
+        margin-right: 10px;
+      }
+    }
+
+    .dropdown-menu {
+      width: 100%;
+      text-align: center;
+      padding: 15px;
+      border-top-left-radius: 0!important;
+      border-top-right-radius: 0!important;
+      border: 1px solid #eaeaea!important;
+      border-top: none!important;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .ha-tickers {
+    width: 190px;
+    margin-top: -1px;
+    font-size: 13px;
+
+    a {
+      width: 100%;
+      display: inline-block;
+      color: lighten($ha-grey-primary-darken,30)!important
+    }
+
+    .ui.loader {
+      &:after {
+        color: $ha-green-primary!important;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    margin-left: 20px;
+    margin-top: 2px;
+    border: none;
+
+    height: 90px;
+
+    &:focus, &:hover, &:active {
+      background-color: transparent!important;
+    }
+  }
+}
+

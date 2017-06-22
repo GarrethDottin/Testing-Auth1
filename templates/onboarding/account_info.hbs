@@ -1,0 +1,36 @@
+
+<div class="wrap">
+	
+	{{partial 'web-client/app/templates/onboarding/header' this}}
+
+	{{#isnt show_not_operating true}}
+		<p class="step-description">Ahoy there! To use our <b>market</b> and <b>payments</b> features you have to fill in some profile details first.</p>
+	{{/isnt}}
+
+	{{#if show_not_operating}}
+		<div class="row">
+			<div class="col-xs-12 not-operating">
+
+				<h1><b>Aw, snap!</b></h1>
+				<p class="step-description">Looks like this feature isn't available for you yet. In the meantime 
+
+				<a target="_blank" href="https://twitter.com/intent/tweet?screen_name=Harborly&text=I want you to launch the %23Harborly %23BTC market in %23{{tweet_text}}!" class="twitter-mention-button" data-related="Harborly">tweet</a>
+				
+				at us so we know where to launch <b>market</b> and <b>payments</b> next!</p>
+				
+			</div>
+		</div>
+
+	{{/if}}
+
+	{{partial 'web-client/app/templates/shared/countries' this}}
+
+	{{#if show_states}}
+		{{partial 'web-client/app/templates/shared/states' this}}
+	{{/if}}
+
+	{{#if show_operating}}
+		{{partial 'web-client/app/templates/onboarding/account_info_forms' this}}
+	{{/if}}
+
+</div>

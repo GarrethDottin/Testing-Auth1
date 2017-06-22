@@ -1,0 +1,351 @@
+.ha-bank-account {
+  img.logo {
+      width: 20px;
+      height: auto;
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: -5px;
+  }
+}
+
+#payments-view {
+
+  padding-bottom: 60px;
+
+  img.logo {
+      width: 20px;
+      height: auto;
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: -5px;
+  }
+
+  .bank-accounts {
+    margin-top: 0.5em;
+
+    h1 {
+      font-size: 1em;
+      margin-bottom: 1em;
+      color: #575757;
+      border-bottom: 2px solid #dddddd;
+      padding-bottom: 0.3em;
+      width: 60%;
+
+    }
+
+    .ha-bank-account {
+      width: 60%!important;
+      @include border-radius-box-shadow;
+    }
+
+    .button.add {
+      margin-top: -1em;
+      font-size: 0.7em;
+    }
+    .accounts {
+      .grid {
+        margin: 0;
+        .column {
+          margin: 0;
+        }
+      }
+      .segment {
+        width: 60%!important;
+        border-radius: 0;
+        padding-top: 2.5em;
+      }
+      .header {
+        font-weight: 100;
+      }
+      .label {
+        border-radius: 0;
+        padding: 0.4em;
+        .grid {
+          .column {
+            margin: 0em;
+            .button {
+              margin: 0 !important;
+              font-size: 0.6em;
+              float: right;
+              padding-top: 0.5em;
+              padding-bottom: 0.5em;
+            }
+          }
+          .title {
+            margin-top: 0.2em;
+            font-size: 12px;
+          }
+        }
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+    
+  }
+
+  // Tablet
+
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    .ha-bank-account {
+      width: 100%!important;
+    }
+    
+  }
+
+  // Wide Phone
+
+  @media only screen and (min-width: 321px) and (max-width: 480px) {
+    .bank-accounts {
+      h1 {
+        width: 95%;
+        margin-bottom: 10px !important;
+      }
+
+      .ha-bank-account {
+        width: 100%!important;
+      }
+      .accounts {
+        font-size: 12px !important;
+      }
+      .button.add {
+        margin-top: -0.8em;
+        font-size: 0.5em;
+      }
+      .input.segment {
+        width: 95% !important;
+      }
+      .segment {
+        padding-top: 3.5em !important;
+      }
+      .label {
+        .title {
+          font-size: 10px !important;
+        }
+      }
+      .label .grid .column .button.delete {
+        margin-top: 8px !important;
+      }
+      .verified {
+        .two.column.grid {
+          margin-top: 3px !important;
+        }
+      }
+    }
+    .verify-box {
+      margin: 0;
+    }
+    .verify-button {
+      position: absolute;
+      z-index: 2 !important;
+      margin-top: 4.8em !important;
+      margin-left: 4% !important;
+      width: 60% !important;
+      font-size: 13px !important;
+    }
+  }
+
+  // Phone and under
+
+  @media only screen and (max-width: 320px) {
+    .bank-accounts {
+      h1 {
+        width: 95%;
+        margin-bottom: 10px !important;
+      }
+      .accounts {
+        font-size: 12px !important;
+      }
+      .button.add {
+        margin-top: -0.8em;
+        font-size: 0.5em;
+      }
+      .input.segment {
+        width: 95% !important;
+      }
+      .segment {
+        padding-top: 3.5em !important;
+      }
+      .label {
+        .title {
+          font-size: 10px !important;
+        }
+      }
+      .label .grid .column .button.delete {
+        margin-top: 8px !important;
+      }
+      .verified {
+        .two.column.grid {
+          margin-top: 3px !important;
+        }
+      }
+    }
+    .verify-box {
+      margin: 0;
+    }
+    .verify-button {
+      position: absolute;
+      z-index: 2 !important;
+      margin-top: 4.8em !important;
+      margin-left: 4% !important;
+      width: 60% !important;
+      font-size: 13px !important;
+    }
+  }
+}
+
+// New
+
+.ha-add-bank.button {
+  margin-top: 30px;
+  font-size: 13px;
+
+  i {
+    color: $ha-grey-primary;
+  }
+
+}
+
+
+
+#payments-view {
+  .ha-bank-account {
+    width: 60%;
+    @include breakpoint(xs) {
+      width: 100%;
+    }
+  }
+
+  h1.ha-sub-header {
+    margin-top: 35px!important;
+    p {
+      font-size: 15px;
+      line-height: 1.8em;
+      text-align: center;
+
+    }
+  }
+
+  .ha-header {
+    margin-bottom: 5px!important;
+
+  }
+}
+
+.ha-bank-account {
+  width: 100%;
+  border-radius: 3px;
+  @include border-radius-box-shadow;
+  
+  text-align: left!important;
+  padding-bottom: 5px;
+  margin-top: 30px;
+
+  .name {
+    background: $ha-grey-secondary;
+    padding: 8px;
+    padding-top: 8px;
+    margin-bottom: 5px;
+    text-align: left!important;
+    font-size: 16px!important;
+    font-weight: 100!important;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    @include breakpoint(xs) {
+      font-size: 14px!important;
+    }
+  }
+
+  .button {
+    font-size: 9px;
+    float: right;
+    margin-left: 1px;
+    margin-top: -4px!important;
+  }
+
+  .descriptor {
+    font-weight: bold;
+  }
+
+  .badge-row {
+    margin-top: -3px;
+  }
+
+  .row {
+    padding: 10px;
+    p {
+      font-size: 13px!important;
+      text-align: left!important;
+      margin: 0!important;
+
+      &.badge {
+        font-size: 11px!important;
+        text-align: center!important;
+        color: white!important;
+        display: inline-block!important;
+        padding-bottom: 3px!important;
+        padding-left: 7px!important;
+        padding-right: 7px!important;
+        padding-top: 3px!important;
+        line-height: 11px!important;
+        margin-top: -13px!important;
+      }
+    }
+  }
+}
+
+.explanation {
+  width: 80%;
+  margin: 0 auto;
+  background: lighten($ha-grey-secondary, 4);
+  padding: 50px;
+  padding-bottom: 40px;
+  border-radius: 3px;
+  margin-top: 30px;
+  border: 2px solid #eaeaea;
+  h1 {
+    font-size: 25px;
+    margin-bottom: 40px;
+  }
+
+  p {
+    margin-left: 20px;
+    margin-top: 15px;
+    line-height: 1.9em;
+    font-size: 14px;
+  }
+
+  .button {
+    margin-top: 30px;
+    font-size: 15px;
+    width: 70%;
+    i {
+      color: white;
+    }
+  }
+}
+
+.info {
+  font-size: 13px!important;
+  line-height: 1.6em!important;
+  text-align: left!important;
+  margin-top: 20px;
+  color: #999999;
+
+}
+
+.info-link {
+  font-size: 13px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.no-banks {
+  text-align: left;
+  font-size: 12px;
+  padding-top: 15px;
+  padding-bottom: 35px;
+  padding-left: 15px;
+}

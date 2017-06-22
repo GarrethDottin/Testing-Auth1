@@ -1,0 +1,114 @@
+<div class="row">
+	<div class="col-md-6">
+		<div class="ui form">
+			<label>Full Name:</label>
+			<div class="ui left input">
+				<input class="func__name_val name" type="text" placeholder="First and last name" value="{{name}}">
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="ui form">
+			<label>Date of Birth:</label>
+			<div class="ui left input">
+				<input class="func__dob_val name" type="text" placeholder="mm/dd/yyyy" {{#if dob.month}}value="{{dob.month}}/{{dob.day}}/{{dob.year}}"{{/if}}>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{partial 'web-client/app/templates/shared/search_address' this}}
+
+<div class="row">
+	<div class="col-md-12">
+		<a class="address-help func__add_personal_address">Can't find your address?</a>
+	</div>
+</div>
+
+{{#is country 'ca'}}
+	<div class="row">
+		<div class="col-md-12">
+			<div class="ui form occupation">
+				<label>Occupation:</label>
+				<div class="ui selection occ dropdown">
+	                <input type="hidden" name="account">
+	                <div class="default text">Select Occupation</div>
+	                <i class="dropdown icon"></i>
+	                <div class="menu func__occupation_list">
+	                	{{#each occupations}}
+		                	<div class="item" data-id="{{this.id}}" data-description="{{this.description}}">
+		                		{{this.description}}
+		                	</div>
+	                	{{/each}}
+	               	</div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+{{/is}}
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="ui form contact">
+			<label>Contact Information:</label>
+			<div class="row">
+
+				<div class="col-xs-4 col-md-3">
+					<input type="text" class="func__phone_code phonecode" value="{{phone_code}}">
+				</div>
+
+				<div class="col-md-9 hidden-xs col-xs-9">
+					<div class="ui action input">
+						<input type="text" class="func__phone_val phone" placeholder="Phone number" value="{{phone}}" 
+							{{#is phone_verified true}} 
+								data-verified=true
+							{{else}}
+								data-verified=false
+							{{/is}}
+						>
+						{{#if phone_verified}}
+							<div class="ui button func__submit_phone disabled">Verified</div>
+						{{else}}
+							<div class="ui button func__submit_phone">Submit</div>
+						{{/if}}
+					</div>
+				</div>
+
+				<div class="col-xs-8 visible-xs">
+					<div class="ui input">
+						<input type="text" class="func__phone_val phone" placeholder="Phone number" value="{{phone}}" 
+							{{#is phone_verified true}} 
+								data-verified=true
+							{{else}}
+								data-verified=false
+							{{/is}}
+						>
+					</div>{{phone}}
+				</div>
+				<div class="col-xs-12 visible-xs">
+					{{#if phone_verified}}
+						<div class="ui button verify func__submit_phone disabled">Verified</div>
+					{{else}}
+						<div class="ui button verify func__submit_phone">Submit</div>
+					{{/if}}
+				</div>
+
+			</div>
+			<div class="row func__verify_box verify-box hidden">
+				<div class="col-xs-12">
+					<p>A code has been sent to your number <b><span class="func__number"></span></b>. Please verify below.</p>
+					<div class="ui action input ">
+						<input type="text" class="func__verify" placeholder="Code">
+						<div class="ui button func__verify_phone">Verify</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-12">
+		<button class="ui button next func__next disabled">Continue</button>
+	</div>
+</div>

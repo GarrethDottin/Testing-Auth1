@@ -1,0 +1,25 @@
+form.dropzone {
+	border: 2px dashed $ha-grey-secondary-darken;
+	width: 95%;
+	margin: 0 auto;
+	border-radius: 5px;
+	margin: 0 auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.dz-message span {
+	line-height: 1.6em;
+}
+
+.dz-remove {
+	margin-top: 10px;
+}
+
+.modal.doc {
+	.submit.ui.button {
+		margin-bottom: 30px;
+		float: right;
+		display: block;
+	}
+}
